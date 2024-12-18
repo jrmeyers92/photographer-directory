@@ -12,7 +12,7 @@ export default function Hero() {
           Discover the top photographers in St. Louis for weddings, portraits,
           events, and more. Your perfect photographer is just a click away.
         </p>
-        <form className="flex w-full max-w-lg overflow-hidden rounded-full bg-white shadow-lg">
+        {/* <form className="flex w-full max-w-lg overflow-hidden rounded-full bg-white shadow-lg">
           <input
             type="text"
             placeholder="Search for photographers, styles, or events..."
@@ -24,8 +24,8 @@ export default function Hero() {
           >
             Search
           </button>
-        </form>
-        <div className="mt-6 flex flex-wrap justify-center gap-4">
+        </form> */}
+        {/* <div className="mt-6 flex flex-wrap justify-center gap-4">
           <button className="rounded-full bg-yellow-500 px-4 py-2 text-white shadow transition hover:bg-yellow-600">
             Wedding Photographers
           </button>
@@ -35,7 +35,7 @@ export default function Hero() {
           <button className="rounded-full bg-yellow-500 px-4 py-2 text-white shadow transition hover:bg-yellow-600">
             Event Photographers
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

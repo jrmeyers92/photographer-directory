@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Nav() {
@@ -12,10 +13,13 @@ export default function Nav() {
     <nav className="bg-gray-900 text-white shadow-md">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-2 text-2xl font-bold">
+        <Link
+          href="/"
+          className="flex items-center space-x-2 text-2xl font-bold"
+        >
           <span>📸</span>
           <span>STL Photographers</span>
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         {/* <ul className="hidden space-x-8 md:flex">
@@ -64,30 +68,30 @@ export default function Nav() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="bg-gray-800 md:hidden">
-          <a
+          <Link
             href="/"
             className="block border-b border-gray-700 px-6 py-2 transition hover:bg-gray-700"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/photographers"
             className="block border-b border-gray-700 px-6 py-2 transition hover:bg-gray-700"
           >
             Photographers
-          </a>
-          <a
+          </Link>
+          <Link
             href="/categories"
             className="block border-b border-gray-700 px-6 py-2 transition hover:bg-gray-700"
           >
             Categories
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="block px-6 py-2 transition hover:bg-gray-700"
           >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>

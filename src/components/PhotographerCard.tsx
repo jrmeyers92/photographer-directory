@@ -1,30 +1,23 @@
+import { Photographer } from "@/types";
 import { Globe } from "lucide-react";
-
-interface Photographer {
-  name: string;
-  image: string;
-  website: string;
-  specialty: string;
-  otherServices: string[];
-  bio: string;
-  location?: string;
-  email?: string;
-  phone?: string;
-}
+import Image from "next/image";
+import React from "react";
 
 interface PhotographerCardProps {
   photographer: Photographer;
 }
 
-export default function PhotographerCard({
+const PhotographerCard: React.FC<PhotographerCardProps> = ({
   photographer,
-}: PhotographerCardProps) {
+}) => {
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-lg">
-      <img
-        src={photographer.image}
-        alt={`${photographer.name}'s profile`}
-        className="h-48 w-full object-cover"
+      <Image
+        src={`/images/photo.jpg`}
+        alt={`${photographer.name}'s photo`}
+        width={500}
+        height={500}
+        className="aspect-square rounded-lg object-cover"
       />
       <div className="space-y-3 p-4">
         <div className="flex items-center justify-between">
@@ -67,4 +60,6 @@ export default function PhotographerCard({
       </div>
     </div>
   );
-}
+};
+
+export default PhotographerCard;
