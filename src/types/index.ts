@@ -17,7 +17,7 @@ export type Photography =
 
 export interface Photographer {
   name: string;
-  image: string;
+  image?: string;
   website: string;
   specialty: Photography[];
   bio: string;

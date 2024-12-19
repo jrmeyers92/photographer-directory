@@ -13,15 +13,26 @@ const PhotographerCard: React.FC<PhotographerCardProps> = ({
 }) => {
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-lg">
-      <img
-        src={photographer.image}
-        alt={`${photographer.name}'s photo`}
-        width={500}
-        height={500}
-        className="aspect-square rounded-lg object-cover"
-      />
+      {photographer.image && (
+        <img
+          src={photographer.image}
+          alt={`${photographer.name}'s photo`}
+          width={500}
+          height={500}
+          className="aspect-square rounded-lg object-cover"
+        />
+      )}
+
+      {!photographer.image && (
+        <img
+          src="/images/photo.jpg"
+          alt="Photographer"
+          className="aspect-square rounded-lg object-cover"
+        />
+      )}
+
       <div className="space-y-3 p-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-nowrap items-center justify-between gap-2">
           <h2 className="text-xl font-semibold text-gray-800">
             {photographer.name}
           </h2>

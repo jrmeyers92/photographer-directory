@@ -23,4 +23,23 @@ export const photographers: Photographer[] = [
     location: "St. Louis, Missouri",
     instagram: "https://www.instagram.com/breayoungblood",
   },
+  {
+    name: "C.T.Photography.STL",
+    website: "https://camerontackaberryphotography.mypixieset.com/",
+    specialty: ["Family", "Newborn"],
+    bio: "Parenthood is precious, and while our memories may get blurrier and weaker with time, we have photos and family albums to remind us of all the lovely days that brought joy and peace. I want to help you save those moments. ",
+    location: "St. Charles, Missouri",
+    phone: "(636) 639-0034",
+  },
+  {
+    name: "Nikki and Her Nikon",
+    website: "https://www.nikkiandhernikon.com/",
+    specialty: ["Event", "Portrait"],
+    bio: "With a decade of experience behind the lens, my focus lies in portrait and event photography, where I thrive on immortalizing the most important memories. ",
+    location: "St. Louis, Missouri",
+    phone: "(314) 707-0408",
+    email: "NikkiAndHerNikon@gmail.com",
+    facebook: "https://www.facebook.com/nikkiandhernikon",
+    instagram: "https://www.instagram.com/nik.ki/",
+  },
 ];
