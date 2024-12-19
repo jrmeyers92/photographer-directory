@@ -1,6 +1,7 @@
 import { Photographer } from "@/types";
-import { Globe } from "lucide-react";
+import { Facebook, Globe, Instagram } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface PhotographerCardProps {
@@ -12,8 +13,8 @@ const PhotographerCard: React.FC<PhotographerCardProps> = ({
 }) => {
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-lg">
-      <Image
-        src={`/images/photo.jpg`}
+      <img
+        src={photographer.image}
         alt={`${photographer.name}'s photo`}
         width={500}
         height={500}
@@ -35,11 +36,7 @@ const PhotographerCard: React.FC<PhotographerCardProps> = ({
           </a>
         </div>
         <p className="text-sm text-gray-500">
-          <strong>Specialty:</strong> {photographer.specialty}
-        </p>
-        <p className="text-sm text-gray-500">
-          <strong>Other Services:</strong>{" "}
-          {photographer.otherServices.join(", ")}
+          <strong>Specialty:</strong> {photographer.specialty.join(", ")}
         </p>
         <p className="text-gray-700">{photographer.bio}</p>
         {photographer.location && (
@@ -57,6 +54,18 @@ const PhotographerCard: React.FC<PhotographerCardProps> = ({
             <strong>Phone:</strong> {photographer.phone}
           </p>
         )}
+        <div className="my-4 flex items-center gap-4">
+          {photographer.facebook && (
+            <Link href={photographer.facebook} className="">
+              <Facebook className="h-6 w-6 text-blue-500" />
+            </Link>
+          )}
+          {photographer.instagram && (
+            <Link href={photographer.instagram} className="">
+              <Instagram className="h-6 w-6 text-pink-500" />
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

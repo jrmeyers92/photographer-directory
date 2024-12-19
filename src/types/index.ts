@@ -11,18 +11,21 @@ export type Photography =
   | "Wildlife"
   | "Conservation"
   | "Newborn"
-  | "Sports";
+  | "Sports"
+  | "Headshot"
+  | "Product";
 
 export interface Photographer {
   name: string;
   image: string;
   website: string;
-  specialty: Photography;
-  otherServices: Photography[];
+  specialty: Photography[];
   bio: string;
   location: string;
-  email: string;
-  phone: string;
+  email?: string;
+  phone?: string;
+  facebook?: string;
+  instagram?: string;
 }
 
 export const CATEGORIES: Photography[] = [
@@ -39,4 +42,6 @@ export const CATEGORIES: Photography[] = [
   "Conservation",
   "Newborn",
   "Sports",
+  "Headshot",
+  "Product",
 ];

@@ -25,17 +25,6 @@ export default function Home() {
     setSelectedCategories([]);
   };
 
-  const filteredPhotographers =
-    selectedCategories.length === 0
-      ? photographers
-      : photographers.filter(
-          (photographer) =>
-            selectedCategories.includes(photographer.specialty) ||
-            photographer.otherServices.some((service) =>
-              selectedCategories.includes(service),
-            ),
-        );
-
   return (
     <div className="min-h-screen bg-gray-50 font-[family-name:var(--font-geist-sans)]">
       <Hero />
@@ -48,7 +37,7 @@ export default function Home() {
             onReset={handleReset}
           />
           <main className="flex-1">
-            <PhotographerList photographers={filteredPhotographers} />
+            <PhotographerList photographers={photographers} />
           </main>
         </div>
       </div>
